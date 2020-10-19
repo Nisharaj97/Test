@@ -1,0 +1,7 @@
+export class Users {
+    id: number;
+    userName: string;
+    password: string;
+    role: string;
+   }
+  

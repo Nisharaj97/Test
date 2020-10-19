@@ -1,0 +1,36 @@
+<form class="form-inline">
+        <div class="form-group">
+          <div class="input-group">
+            <input class="form-control" placeholder="yyyy-mm-dd"
+                   name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" >
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+            </div>
+          </div>
+        </div>
+        <div>
+            <input type="button" name="get " (click)="change(model)"  class="btn btn-success" value="Get anniversary">
+        </div>
+        <div class="table-responsive" >
+                <table class="table table-bordered">
+                  <thead>
+                  <tr>
+                    <th>Employee Name</th>
+                    <th>Join Date</th>
+                      </tr>
+                </thead>
+                <tbody>
+                  <ng-container *ngFor="let org of anniversarylist;let i = index" (click)="onClickforEdit(i);">
+                    <tr style="cursor:pointer">
+                      <td>{{org.firstName}}</td>
+                      <td>{{org.joindate }}</td>
+      
+                     
+                       </tr>
+                  </ng-container>
+                </tbody>
+                </table>
+              </div>
+           
+      </form>
+         
