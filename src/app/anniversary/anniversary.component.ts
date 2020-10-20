@@ -15,23 +15,18 @@ export class AnniversaryComponent implements OnInit {
   myDateValue: Date;
   employee: Employee;
   dateval:String;model:any;
-  data:any;
+  data:any;curdtes:String;models:any={};
   anniversarylist:any=[];
   ngOnInit() {
-    // this.myDateValue = new Date();
-    // this.dateval="1";
-    // this.employeeService.getAnniversary(this.dateval)
-    //   .subscribe(data => {
-    //     console.log(data)
-    //     this.employee = data;
-    //   }, error => console.log(error));
-  
+   
   }
   change(curdte)
   {
     this.employee = new Employee();
-  this.employee.firstName=curdte;
-    this.employeeService.getAnniversary(this.employee)
+    this. curdtes=curdte;
+    this.models={curdte:curdte};
+    console.log(curdte);
+    this.employeeService.getAnniversary(this.models)
       .subscribe(data => {
         this.data=data;
         console.log(data)
