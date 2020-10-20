@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'update/:id', component: UpdateEmployeeComponent },
   { path: 'details/:id', component: EmployeeDetailsComponent },
   { path: 'employees/anniversary', component: AnniversaryComponent },
-  { path: 'logout', component: LogoutComponent },
+  { path: 'employees/logout', component: LogoutComponent },
   
   
 ];
