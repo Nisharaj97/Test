@@ -13,8 +13,8 @@ export class EmployeeService {
   login(Users: Object): Observable<any> {
     return this.http.post(`${'http://localhost:8990/springboot-crud-rest/Emp/authenticate'}`,Users);
   }
-  getAnniversary(employee: Object): Observable<Object> {
-    return this.http.post(`${'http://localhost:8990/springboot-crud-rest/Emp/employeesanniv'}`,employee);
+  getAnniversary(requestdata: any): Observable<Object> {
+    return this.http.post(`${'http://localhost:8990/springboot-crud-rest/Emp/employeesanniv'}`,requestdata);
   }
 
   getEmployee(id: number): Observable<any> {
